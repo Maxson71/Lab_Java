@@ -27,7 +27,7 @@ public class Main {
                 new Wagons.FreightWagons("Цистерна", 10, 10)
         };
 
-        int TumberOfPassengers = 0;
+        int NumberOfPassengers = 0;
         int WeightOfBaggage = 0;
 
         // Виведення всіх вагонів у створеному потязі
@@ -45,7 +45,7 @@ public class Main {
                         p.getType(), passengers, baggage, p.getAmount(), comfort);
                 // Сума всіх пасажирів і багажу
                 if (p.getPassengers() != null) {
-                    TumberOfPassengers += p.getPassengers() * p.getAmount();
+                    NumberOfPassengers += p.getPassengers() * p.getAmount();
                 } else if (p.getBaggage() != null) {
                     WeightOfBaggage += p.getBaggage() * p.getAmount();
                 }
@@ -53,7 +53,7 @@ public class Main {
         }
 
         System.out.print("\nЗагальна кількість пасажирів у потязі: ");
-        System.out.println(TumberOfPassengers);
+        System.out.println(NumberOfPassengers);
         System.out.print("Загальна маса багажу у потязі (тонн): ");
         System.out.println(WeightOfBaggage);
 
@@ -79,6 +79,5 @@ public class Main {
                 System.out.println(t.getType() + " - " + t.getPassengers());
             }
         }
-
     }
 }
