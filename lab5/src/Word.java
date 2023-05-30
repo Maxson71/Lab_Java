@@ -1,22 +1,21 @@
 import java.util.Arrays;
 
 public class Word {
+    private Letter[] letters = new Letter[]{}; // Масив літер
 
-    private Letter[] letters = new Letter[]{};
-
-    public Word(){}
+    public Word(){} // Порожній конструктор класу Word
 
     public void addLetter(Letter letter){
-        //Копіюємо масив та збільшуємо його розмір на 1
+        // Копіюємо масив та збільшуємо його розмір на 1
         letters = Arrays.copyOf(letters, letters.length+1);
-        letters[letters.length - 1] = letter;
+        letters[letters.length - 1] = letter; // Додаємо літеру в кінець масиву
     }
 
     public String getWord(){
         StringBuilder word = new StringBuilder();
-        for(int i = 0; i < letters.length; i++){
-            word.append(letters[i].getCharacter());
+        for (Letter letter : letters) {
+            word.append(letter.getCharacter()); // Додаємо кожну літеру до слова
         }
-        return word.toString();
+        return word.toString(); // Повертаємо слово у вигляді рядка
     }
 }
